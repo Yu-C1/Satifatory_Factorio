@@ -18,10 +18,11 @@ MonoBehaviour:
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 3249628057040093144, guid: 62ee6f9802a6e574ca64d4dde4ae6af1,
       type: 3}
-  - <Name>k__BackingField: 
-    <ID>k__BackingField: 0
-    <Size>k__BackingField: {x: 0, y: 0}
-    <Prefab>k__BackingField: {fileID: 0}
+  - <Name>k__BackingField: Gold Dropper
+    <ID>k__BackingField: 1
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 2616178873027209600, guid: cb9ec614acfde134ca2ec54bb5cf2ccb,
+      type: 3}
   - <Name>k__BackingField: 
     <ID>k__BackingField: 0
     <Size>k__BackingField: {x: 0, y: 0}

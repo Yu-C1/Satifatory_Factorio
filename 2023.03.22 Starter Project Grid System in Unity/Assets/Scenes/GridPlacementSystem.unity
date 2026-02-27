@@ -1638,7 +1638,7 @@ MonoBehaviour:
   inputManager: {fileID: 1055751025}
   grid: {fileID: 1029314929}
   database: {fileID: 11400000, guid: 1788abc2ab772eb48a3d88aa4772b216, type: 2}
-  gridVisualization: {fileID: 1029314927}
+  gridVisualization: {fileID: 1710442408}
 --- !u!1 &1456698203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2118,7 @@ PrefabInstance:
     - target: {fileID: 7897775575725484003, guid: 8ece0f0faf8317849a46eacc430a72b1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7897775575725484003, guid: 8ece0f0faf8317849a46eacc430a72b1,
         type: 3}
@@ -2129,7 +2129,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1186440003}
     - target: {fileID: 7897775575725484003, guid: 8ece0f0faf8317849a46eacc430a72b1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
