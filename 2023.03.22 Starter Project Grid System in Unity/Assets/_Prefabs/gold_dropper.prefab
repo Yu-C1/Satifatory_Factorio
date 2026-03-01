@@ -148,6 +148,7 @@ Transform:
   - {fileID: 5538922807915200086}
   - {fileID: 3907621618569772608}
   - {fileID: 1602186056660047811}
+  - {fileID: 8249064506506351026}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3195364459422325997
@@ -524,6 +525,60 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5975551720066693725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8249064506506351026}
+  - component: {fileID: 7836222827229648265}
+  m_Layer: 0
+  m_Name: EmitterGold
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8249064506506351026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975551720066693725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.057, y: 0.846, z: 0.692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 845295941054631203}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7836222827229648265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975551720066693725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 926cb9ac992461c439ffdb446face20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhysicsSimulation
+  emitter: {fileID: 5975551720066693725}
+  sphereGameObject: {fileID: 3200003984085201577, guid: 7c3a6cc093f7d294ea58b1c66318a1d0,
+    type: 3}
+  mass: 0.1
+  scale: 1
+  period: 0.5
+  initialVelocity: {x: 0, y: 0, z: 0}
+  constantF: {x: 0, y: -0.5, z: 0}
+  dragF: 0
+  maxSpheres: 5
 --- !u!1 &6243585954221143522
 GameObject:
   m_ObjectHideFlags: 0

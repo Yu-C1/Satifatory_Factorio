@@ -23,11 +23,43 @@ MonoBehaviour:
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 2616178873027209600, guid: cb9ec614acfde134ca2ec54bb5cf2ccb,
       type: 3}
-  - <Name>k__BackingField: 
-    <ID>k__BackingField: 0
-    <Size>k__BackingField: {x: 0, y: 0}
-    <Prefab>k__BackingField: {fileID: 0}
-  - <Name>k__BackingField: 
-    <ID>k__BackingField: 0
-    <Size>k__BackingField: {x: 0, y: 0}
-    <Prefab>k__BackingField: {fileID: 0}
+  - <Name>k__BackingField: Silver Dropper
+    <ID>k__BackingField: 2
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 2194595961210835691, guid: 502e5ab7ae65abe41b32745435aa2d93,
+      type: 3}
+  - <Name>k__BackingField: Stone Dropper
+    <ID>k__BackingField: 3
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 4439701191227679919, guid: b8e823fd7fe0e414b96776e14c75ae09,
+      type: 3}
+  - <Name>k__BackingField: Conveyor
+    <ID>k__BackingField: 4
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 3518151799046377412, guid: 74fbde9dbf572de4b94b0422905defef,
+      type: 3}
+  - <Name>k__BackingField: Basic Furnace
+    <ID>k__BackingField: 5
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 2343354933410272472, guid: 86cf5367afc2989489758f501966a945,
+      type: 3}
+  - <Name>k__BackingField: Advance Furnace
+    <ID>k__BackingField: 6
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 2481962294383222635, guid: 83e30df69c8174048be080f1e8fad8be,
+      type: 3}
+  - <Name>k__BackingField: Expert Furnace
+    <ID>k__BackingField: 7
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 2360650856686751862, guid: d00044ec6435edd4eb5e09787c308c44,
+      type: 3}
+  - <Name>k__BackingField: Basic Upgrader
+    <ID>k__BackingField: 8
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 8022667520200143875, guid: b6392fc68f7772f4687e930e1dc2f981,
+      type: 3}
+  - <Name>k__BackingField: Expert Upgrader
+    <ID>k__BackingField: 9
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 6406322956326016942, guid: 0a8b6c4017c3b694ab72d46b72dafd2c,
+      type: 3}
