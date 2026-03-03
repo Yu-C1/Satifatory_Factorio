@@ -213,7 +213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7428106991368455141}
-  - component: {fileID: 5292786422680271312}
+  - component: {fileID: 2583953759763140438}
   m_Layer: 0
   m_Name: EmitterSilver
   m_TagString: Untagged
@@ -236,7 +236,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4808285476434749137}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5292786422680271312
+--- !u!114 &2583953759763140438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,19 +245,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1186407974681542237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 926cb9ac992461c439ffdb446face20a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b0afb91f938d9a4a8d6e923b58f5f7b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PhysicsSimulation
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   emitter: {fileID: 1186407974681542237}
   sphereGameObject: {fileID: 2436751973738447860, guid: d7d7d12ca0c8f1c48a2e3beb58f0f503,
     type: 3}
-  mass: 0.1
   scale: 1
   period: 0.5
-  initialVelocity: {x: 0, y: 0, z: 0}
-  constantF: {x: 0, y: -0.1, z: 0}
-  dragF: 0
-  maxSpheres: 5
+  maxSpheres: 25
 --- !u!1 &2194595961210835691
 GameObject:
   m_ObjectHideFlags: 0
