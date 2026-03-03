@@ -572,12 +572,9 @@ MonoBehaviour:
   emitter: {fileID: 5975551720066693725}
   sphereGameObject: {fileID: 3200003984085201577, guid: 7c3a6cc093f7d294ea58b1c66318a1d0,
     type: 3}
-  mass: 0.1
   scale: 1
-  period: 0.5
-  initialVelocity: {x: 0, y: 0, z: 0}
-  constantF: {x: 0, y: 0, z: 0}
-  maxSpheres: 25
+  period: 2
+  maxSpheres: 100
 --- !u!1 &6243585954221143522
 GameObject:
   m_ObjectHideFlags: 0

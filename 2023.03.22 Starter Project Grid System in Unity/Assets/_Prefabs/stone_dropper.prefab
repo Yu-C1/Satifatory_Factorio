@@ -48,8 +48,8 @@ MonoBehaviour:
   sphereGameObject: {fileID: 6432795293382486939, guid: d9bb0142c54c62949b24885a2505ac86,
     type: 3}
   scale: 1
-  period: 0.5
-  maxSpheres: 25
+  period: 2
+  maxSpheres: 100
 --- !u!1 &1639897883960499305
 GameObject:
   m_ObjectHideFlags: 0
