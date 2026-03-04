@@ -4493,9 +4493,10 @@ GameObject:
   - component: {fileID: 1321706637145990029}
   - component: {fileID: 6365069697295938178}
   - component: {fileID: 3079549332519067548}
+  - component: {fileID: 1195552750922599179}
   m_Layer: 0
-  m_Name: upgrade_wall
-  m_TagString: Untagged
+  m_Name: upgrade_wall_upgrader
+  m_TagString: AddUpgrader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4587,12 +4588,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1195552750922599179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385088161719814441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c5651b6c8ed1f4ea58df6ba4bbf238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AddUpgrader
+  addAmount: 10
 --- !u!1 &6577968506230505188
 GameObject:
   m_ObjectHideFlags: 0

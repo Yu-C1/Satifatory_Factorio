@@ -71,5 +71,5 @@ MonoBehaviour:
   - <Name>k__BackingField: Left Conveyor
     <ID>k__BackingField: 11
     <Size>k__BackingField: {x: 1, y: 1}
-    <Prefab>k__BackingField: {fileID: 1641566688320428098, guid: ec488dbc07a300b4c9973bc7adc1013e,
+    <Prefab>k__BackingField: {fileID: 1641566688320428098, guid: b3375c89767885540bca180125acd0e6,
       type: 3}

@@ -272,9 +272,10 @@ GameObject:
   - component: {fileID: 3800953809580701028}
   - component: {fileID: 3611207792344870296}
   - component: {fileID: 7006165746658995574}
+  - component: {fileID: 6490800277345222622}
   m_Layer: 0
   m_Name: mouth
-  m_TagString: Untagged
+  m_TagString: Furnace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,12 +367,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6490800277345222622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4772581539999568227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ad83e4bff55944eb5f1c8f731d2f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Furnace
+  multiplyAmount: 2
 --- !u!1 &5355606612216164601
 GameObject:
   m_ObjectHideFlags: 0
