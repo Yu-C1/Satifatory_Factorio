@@ -19,35 +19,38 @@ public class PlacementSystem : MonoBehaviour
 
     // which object occupies a given cell
     private readonly Dictionary<Vector3Int, PlacedObjectInfo> occupied = new();
+    private enum ToolMode { None, Place, Remove }
+    private ToolMode mode = ToolMode.None;
 
     private void Start()
     {
-        StopPlacement();
+        StopAllTools();
         
     }
 
     public void StartPlacement (int ID)
     {
-        StopPlacement();
+        StopAllTools();
         selectedObjectIndex = database.objectsData.FindIndex(data => data.ID == ID);
         if (selectedObjectIndex < 0)
         {
             Debug.LogError($"No ID found {ID}");
             return;
         }
+        mode = ToolMode.Place;
         gridVisualization.SetActive(true);
         cellIndicator.SetActive(true);
-        inputManager.OnClicked += PlaceStructure;
-        inputManager.OnExit += StopPlacement;
+        inputManager.OnClicked += OnLeftClick;
+        inputManager.OnExit += StopAllTools;
     }
 
     private void PlaceStructure()
     {
         if (selectedObjectIndex < 0) return;
-        if (inputManager.IsPointerOverUI())
-        {
-            return;
-        }
+        // if (inputManager.IsPointerOverUI())
+        // {
+        //     return;
+        // }
         Vector3 mousePosition = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
         ObjectData data = database.objectsData[selectedObjectIndex];
@@ -84,17 +87,9 @@ public class PlacementSystem : MonoBehaviour
             occupied[cell] = info;    
     }
 
-    private void StopPlacement()
-    {
-        selectedObjectIndex = -1;
-        gridVisualization.SetActive(false);
-        cellIndicator.SetActive(false);
-        inputManager.OnClicked -= PlaceStructure;
-        inputManager.OnExit -= StopPlacement;
-    }
     private void Update()
     {
-        if (selectedObjectIndex < 0)
+        if (mode == ToolMode.None)
         {
             return;            
         }
@@ -103,7 +98,6 @@ public class PlacementSystem : MonoBehaviour
         mouseIndicator.transform.position = mousePosition;
         cellIndicator.transform.position = grid.CellToWorld(gridPosition);
     }
-
 
     private List<Vector3Int> GetFootprintCells(Vector3Int originCell, Vector2Int size)
     {
@@ -130,4 +124,58 @@ public class PlacementSystem : MonoBehaviour
         return true;
     }
 
+    private void RemoveStructure()
+    {
+        Vector3 mousePosition = inputManager.GetSelectedMapPosition();
+        Vector3Int gridPosition = grid.WorldToCell(mousePosition);
+
+        if (!occupied.TryGetValue(gridPosition, out var info) || info == null)
+        {
+            Debug.Log("Nothing to remove here.");
+            return;
+        }
+
+        // Remove all cells occupied by this object
+        foreach (var cell in info.OccupiedCells)
+        {
+            // Safety: only remove if it points to the same object
+            if (occupied.TryGetValue(cell, out var who) && who == info)
+                occupied.Remove(cell);
+        }
+
+        Destroy(info.gameObject);
+    }
+
+    private void OnLeftClick()
+    {
+        if (inputManager.IsPointerOverUI()) return;
+
+        if (mode == ToolMode.Place) PlaceStructure();
+        else if (mode == ToolMode.Remove) RemoveStructure();
+    }
+    public void StopAllTools()
+    {
+        mode = ToolMode.None;
+        selectedObjectIndex = -1;
+
+        if (gridVisualization != null) gridVisualization.SetActive(false);
+        if (cellIndicator != null) cellIndicator.SetActive(false);
+
+        if (inputManager != null)
+        {
+            inputManager.OnClicked -= OnLeftClick;
+            inputManager.OnExit -= StopAllTools;
+        }
+    }
+    public void StartRemoveMode()
+    {
+        StopAllTools();
+
+        mode = ToolMode.Remove;
+        gridVisualization.SetActive(true);
+        cellIndicator.SetActive(true);
+
+        inputManager.OnClicked += OnLeftClick;
+        inputManager.OnExit += StopAllTools;
+    }
 }
