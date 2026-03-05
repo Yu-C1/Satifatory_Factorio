@@ -62,6 +62,12 @@ public class PlacementSystem : MonoBehaviour
             Debug.Log("Can't place here: cells occupied.");
             return;
         }
+        
+        if (!MoneyManager.Instance.Spend(data.Cost))
+        {
+            Debug.Log("Not enough money.");
+            return;
+        }
 
         // Place object
         GameObject newObject = Instantiate(data.Prefab);

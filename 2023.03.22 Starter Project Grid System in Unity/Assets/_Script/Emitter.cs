@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Emitter : MonoBehaviour
 {
     public GameObject emitter; // Emits spheres
     public GameObject sphereGameObject; 
