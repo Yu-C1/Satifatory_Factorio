@@ -32,8 +32,10 @@ public class Ore : MonoBehaviour
                 value *= Furnace.multiplyAmount;
             }
 
-            // Replace the debug with code to update user money
-            Debug.Log(gameObject + " sell " + value);
+            if (MoneyManager.Instance != null)
+            {
+                MoneyManager.Instance.Add((int) value);
+            }
             Destroy(gameObject); // Despawn sphere
         }
     }
