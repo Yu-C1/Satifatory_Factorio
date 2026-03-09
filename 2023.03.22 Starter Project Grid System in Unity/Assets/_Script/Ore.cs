@@ -38,5 +38,10 @@ public class Ore : MonoBehaviour
             }
             Destroy(gameObject); // Despawn sphere
         }
+        // grass collision
+        else if (other.CompareTag("Ground"))
+        {
+            Destroy(gameObject); // Despawn sphere
+        }
     }
 }

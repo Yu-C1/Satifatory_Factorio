@@ -9,6 +9,7 @@ TagManager:
   - AddUpgrader
   - MultiplyUpgrader
   - Furnace
+  - Ground
   layers:
   - Default
   - TransparentFX
