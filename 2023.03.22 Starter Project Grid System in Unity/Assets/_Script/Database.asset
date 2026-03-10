@@ -19,81 +19,81 @@ MonoBehaviour:
     <Prefab>k__BackingField: {fileID: 3249628057040093144, guid: 62ee6f9802a6e574ca64d4dde4ae6af1,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: a4cdf08207ff0c541ac76d894df21310, type: 3}
   - <Name>k__BackingField: Gold Dropper
     <ID>k__BackingField: 1
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 2616178873027209600, guid: cb9ec614acfde134ca2ec54bb5cf2ccb,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: b700cf5bd776d92419154f167892d02d, type: 3}
   - <Name>k__BackingField: Silver Dropper
     <ID>k__BackingField: 2
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 2194595961210835691, guid: 502e5ab7ae65abe41b32745435aa2d93,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 98aa35566ceb61f4087dadea9798e434, type: 3}
   - <Name>k__BackingField: Stone Dropper
     <ID>k__BackingField: 3
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 4439701191227679919, guid: b8e823fd7fe0e414b96776e14c75ae09,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: e13fbbf78227c6c45940acc916500121, type: 3}
   - <Name>k__BackingField: Conveyor
     <ID>k__BackingField: 4
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 3518151799046377412, guid: 74fbde9dbf572de4b94b0422905defef,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 83541b8889d520f46b172bb09573e46a, type: 3}
   - <Name>k__BackingField: Basic Furnace
     <ID>k__BackingField: 5
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 2343354933410272472, guid: 86cf5367afc2989489758f501966a945,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 8f2882fdf2cf17445b67047090ccc144, type: 3}
   - <Name>k__BackingField: Advance Furnace
     <ID>k__BackingField: 6
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 2481962294383222635, guid: 83e30df69c8174048be080f1e8fad8be,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: d27a46ee9bd4ea54fbe47bcacab7e85b, type: 3}
   - <Name>k__BackingField: Expert Furnace
     <ID>k__BackingField: 7
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 2360650856686751862, guid: d00044ec6435edd4eb5e09787c308c44,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: feae788031cf81b41ac166db3de0892b, type: 3}
   - <Name>k__BackingField: Basic Upgrader
     <ID>k__BackingField: 8
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 8022667520200143875, guid: b6392fc68f7772f4687e930e1dc2f981,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: d185531116b04604ab142f6040a116be, type: 3}
   - <Name>k__BackingField: Expert Upgrader
     <ID>k__BackingField: 9
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 6406322956326016942, guid: 0a8b6c4017c3b694ab72d46b72dafd2c,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 05a6d174f14ac55469ea5b9a44d295bd, type: 3}
   - <Name>k__BackingField: Right Conveyor
     <ID>k__BackingField: 10
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 1641566688320428098, guid: ec488dbc07a300b4c9973bc7adc1013e,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 1143890887d4a704ab8a6c4f4b64c1aa, type: 3}
   - <Name>k__BackingField: Left Conveyor
     <ID>k__BackingField: 11
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 1641566688320428098, guid: b3375c89767885540bca180125acd0e6,
       type: 3}
     Cost: 10
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: d1eaf776b009d6743a3f3fe7fe84d9a2, type: 3}
