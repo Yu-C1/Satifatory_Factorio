@@ -22,6 +22,9 @@ public class PlacementSystem : MonoBehaviour
     private enum ToolMode { None, Place, Remove }
     private ToolMode mode = ToolMode.None;
 
+    private int rotationIndex = 0;
+    private const int RotationStep = 90;
+
     private void Start()
     {
         StopAllTools();
@@ -37,6 +40,7 @@ public class PlacementSystem : MonoBehaviour
             Debug.LogError($"No ID found {ID}");
             return;
         }
+        rotationIndex = 0;
         mode = ToolMode.Place;
         gridVisualization.SetActive(true);
         cellIndicator.SetActive(true);
@@ -55,8 +59,10 @@ public class PlacementSystem : MonoBehaviour
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
         ObjectData data = database.objectsData[selectedObjectIndex];
 
+        Vector2Int rotatedSize = GetRotatedSize(data.Size);
+
         // Compute footprint cells
-        List<Vector3Int> footprint = GetFootprintCells(gridPosition, data.Size);
+        List<Vector3Int> footprint = GetFootprintCells(gridPosition, rotatedSize);
 
         // Enforce placement rules
         if (!CanPlace(footprint))
@@ -77,6 +83,7 @@ public class PlacementSystem : MonoBehaviour
 
         // Use center of the origin cell for clean alignment
         newObject.transform.position = grid.CellToWorld(gridPosition);
+        newObject.transform.rotation = Quaternion.Euler(0, rotationIndex * RotationStep, 0);
 
         // Track occupancy
         var info = newObject.GetComponent<PlacedObjectInfo>();
@@ -93,10 +100,26 @@ public class PlacementSystem : MonoBehaviour
         {
             return;            
         }
+
+        if (mode == ToolMode.Place && Input.GetKeyDown(KeyCode.R))
+        {
+            rotationIndex = (rotationIndex + 1) % 4;
+        }
+
         Vector3 mousePosition = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
         mouseIndicator.transform.position = mousePosition;
         cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+        if (mode == ToolMode.Place)
+        {
+            cellIndicator.transform.rotation = Quaternion.Euler(0, rotationIndex * RotationStep, 0);
+        }
+    }
+
+    private Vector2Int GetRotatedSize(Vector2Int size)
+    {
+        bool swap = rotationIndex % 2 == 1;
+        return swap ? new Vector2Int(size.y, size.x) : size;
     }
 
     private List<Vector3Int> GetFootprintCells(Vector3Int originCell, Vector2Int size)
@@ -157,9 +180,14 @@ public class PlacementSystem : MonoBehaviour
     {
         mode = ToolMode.None;
         selectedObjectIndex = -1;
+        rotationIndex = 0;
 
         if (gridVisualization != null) gridVisualization.SetActive(false);
-        if (cellIndicator != null) cellIndicator.SetActive(false);
+        if (cellIndicator != null)
+        {
+            cellIndicator.SetActive(false);
+            cellIndicator.transform.rotation = Quaternion.identity;
+        }
 
         if (inputManager != null)
         {
